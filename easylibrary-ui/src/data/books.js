@@ -9,7 +9,7 @@ import worstWitchImage from "../assets/thumbs/worst_witch.jpg";
 import missPeregrineImage from "../assets/thumbs/miss_peregrine.jpg";
 import nevermoorImage from "../assets/thumbs/nevermoor.jpg";
 
-const books = [
+const defaultBooks = [
   {
     bookId: 1,
     title: "Harry Potter and the Sorcerer's Stone",
@@ -92,4 +92,4 @@ const books = [
   },
 ];
 
-export default books;
+export default defaultBooks;
