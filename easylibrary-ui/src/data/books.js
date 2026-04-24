@@ -11,7 +11,7 @@ import nevermoorImage from "../assets/thumbs/nevermoor.jpg";
 
 const defaultBooks = [
   {
-    bookId: 1,
+    id: 1,
     title: "Harry Potter and the Sorcerer's Stone",
     author: "J.K. Rowling",
     isbn: "978-0439708180",
@@ -19,7 +19,7 @@ const defaultBooks = [
     imageUrl: harryPotter1Image,
   },
   {
-    bookId: 2,
+    id: 2,
     title: "Percy Jackson and the Lightning Thief",
     author: "Rick Riordan",
     isbn: "978-0786838653",
@@ -27,7 +27,7 @@ const defaultBooks = [
     imageUrl: percyJackson1Image,
   },
   {
-    bookId: 3,
+    id: 3,
     title: "Eragon",
     author: "Christopher Paolini",
     isbn: "978-0375826696",
@@ -35,7 +35,7 @@ const defaultBooks = [
     imageUrl: eragonImage,
   },
   {
-    bookId: 4,
+    id: 4,
     title: "The Golden Compass",
     author: "Philip Pullman",
     isbn: "978-0679783268",
@@ -43,7 +43,7 @@ const defaultBooks = [
     imageUrl: goldenCompassImage,
   },
   {
-    bookId: 5,
+    id: 5,
     title: "Artemis Fowl",
     author: "Eoin Colfer",
     isbn: "978-0786808014",
@@ -51,7 +51,7 @@ const defaultBooks = [
     imageUrl: artemisFowlImage,
   },
   {
-    bookId: 6,
+    id: 6,
     title: "The Magicians",
     author: "Lev Grossman",
     isbn: "978-0452296295",
@@ -59,7 +59,7 @@ const defaultBooks = [
     imageUrl: theMagiciansImage,
   },
   {
-    bookId: 7,
+    id: 7,
     title: "A Deadly Education",
     author: "Naomi Novik",
     isbn: "978-0593128480",
@@ -67,7 +67,7 @@ const defaultBooks = [
     imageUrl: deadlyEducationImage,
   },
   {
-    bookId: 8,
+    id: 8,
     title: "The Worst Witch",
     author: "Jill Murphy",
     isbn: "978-0763640847",
@@ -75,7 +75,7 @@ const defaultBooks = [
     imageUrl: worstWitchImage,
   },
   {
-    bookId: 9,
+    id: 9,
     title: "Miss Peregrine's Home for Peculiar Children",
     author: "Ransom Riggs",
     isbn: "978-1594746031",
@@ -83,7 +83,7 @@ const defaultBooks = [
     imageUrl: missPeregrineImage,
   },
   {
-    bookId: 10,
+    id: 10,
     title: "Nevermoor: The Trials of Morrigan Crow",
     author: "Jessica Townsend",
     isbn: "978-0316508899",

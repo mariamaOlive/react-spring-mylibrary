@@ -6,7 +6,7 @@ export default function BookListing({ books }) {
       {books.length > 0 ? (
         <div className="book-grid">
           {books.map((book) => (
-            <BookCard key={book.bookId} book={book} />
+            <BookCard key={book.id} book={book} />
           ))}
         </div>
       ) : (
