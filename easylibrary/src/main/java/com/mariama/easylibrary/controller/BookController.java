@@ -3,11 +3,11 @@ package com.mariama.easylibrary.controller;
 import com.mariama.easylibrary.entity.Book;
 import com.mariama.easylibrary.service.IBookService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/books")
@@ -17,7 +17,25 @@ public class BookController {
     private final IBookService iBookService;
 
     @GetMapping
-    public List<Book> getBooks(){
+    public List<Book> getBooks() {
         return iBookService.getBooks();
     }
+
+    @GetMapping("/{id}")
+    public Optional<Book> getBookById(@PathVariable Long id) {
+        return iBookService.getBookById(id);
+    }
+
+    @PostMapping
+    public ResponseEntity<Book> create(@RequestBody Book book) {
+        Book saved = iBookService.saveBook(book);
+        return ResponseEntity.ok(saved);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        iBookService.deleteBook(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }

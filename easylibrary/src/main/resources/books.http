@@ -1,0 +1,30 @@
+### GET request to example server
+#GET https://examples.http-client.intellij.net/get
+#    ?generated-in=IntelliJ IDEA
+
+### Create Book - Game of Thrones
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+
+{
+  "title": "A Game of Thrones",
+  "author": "R.R. Martin",
+  "isbn": "978-0553103540",
+  "publishedYear": 1996,
+  "imageName": "game-of-thrones.jpg"
+}
+###
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+
+{
+  "title": "The Blade Itself",
+  "author": "Joe Abercrombie",
+  "isbn": "978-0575079793",
+  "publishedYear": 2006,
+  "imageName": "the-blade-itself.jpg"
+}
+
+
+###
+DELETE http://localhost:8080/api/v1/books/1

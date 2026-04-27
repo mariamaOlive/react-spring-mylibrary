@@ -11,11 +11,14 @@ import lombok.Setter;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ Column (name = "ID", nullable = false)
+    @Column (name = "ID", nullable = false)
     private Long id;
 
     @Column (name = "TITLE", nullable = false, length = 250)
     private String title;
+
+    @Column (name = "AUTHOR", nullable = false, length = 250)
+    private String author;
 
     @Column (name = "ISBN", nullable = false, length = 250)
     private String isbn;
