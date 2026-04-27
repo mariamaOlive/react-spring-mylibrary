@@ -17,9 +17,6 @@ public class Book {
     @Column (name = "TITLE", nullable = false, length = 250)
     private String title;
 
-    @Column (name = "AUTHOR", nullable = false, length = 250)
-    private String author;
-
     @Column (name = "ISBN", nullable = false, length = 250)
     private String isbn;
 
@@ -28,5 +25,10 @@ public class Book {
 
     @Column (name = "IMAGE_NAME", nullable = false, length = 500)
     private String imageName;
+
+    @ManyToOne
+    @JoinColumn (name = "AUTHOR_ID")
+    private Author author;
+
 }
 
