@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.mariama.easylibrary.repository.BookRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
