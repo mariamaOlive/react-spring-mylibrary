@@ -25,10 +25,10 @@ public class BookServiceImplTest {
     private BookServiceImpl bookServiceImpl;
 
     @Test
-    void getAllBooks_shouldReturnAllBooks(){
+    void getAllBooks_shouldReturnAllBooks() {
         //Arrange
-        Author rowling  = new Author(1L, "J.K. Rowling", "British", "rowling.jpg");
-        Author riordan  = new Author(2L, "Rick Riordan",  "American", "riordan.jpg");
+        Author rowling = new Author(1L, "J.K. Rowling", "British", "rowling.jpg");
+        Author riordan = new Author(2L, "Rick Riordan", "American", "riordan.jpg");
 
         Book book1 = new Book(1L, "Harry Potter and the Sorcerer's Stone",
                 "978-0439708180", 1997, "harry_potter_1.jpg", rowling);
@@ -45,9 +45,6 @@ public class BookServiceImplTest {
         assertEquals("Rick Riordan", books.get(1).getAuthor().getName());
         verify(bookRepository, times(1)).findAll();
     }
-
-
-
 
 
 }
