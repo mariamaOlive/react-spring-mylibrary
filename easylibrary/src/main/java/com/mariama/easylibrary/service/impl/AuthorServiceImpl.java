@@ -35,6 +35,13 @@ public class AuthorServiceImpl implements IAuthorService {
         return authorRepository.save(author);
     }
 
+    @Override
+    public void deleteAuthor(Long id){
+        Author author = authorRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));
+        authorRepository.delete(author);
+    }
+
 
 
 }

@@ -1,6 +1,7 @@
 package com.mariama.easylibrary.service.impl;
 
 import com.mariama.easylibrary.entity.Book;
+import com.mariama.easylibrary.exception.ResourceNotFoundException;
 import com.mariama.easylibrary.service.IBookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -21,8 +22,9 @@ public class BookServiceImpl implements IBookService {
     }
 
     @Override
-    public Optional<Book> getBookById(Long id) {
-        return bookRepository.findById(id);
+    public Book getBookById(Long id) {
+        return bookRepository.findById(id)
+                .orElseThrow(()-> new ResourceNotFoundException("Book not found with id: " + id));
     }
 
     @Override

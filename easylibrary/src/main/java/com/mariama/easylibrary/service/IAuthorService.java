@@ -11,4 +11,6 @@ public interface IAuthorService {
     Author getAuthorById(Long id);
 
     Author saveAuthor(Author author);
+
+    void deleteAuthor(Long id);
 }

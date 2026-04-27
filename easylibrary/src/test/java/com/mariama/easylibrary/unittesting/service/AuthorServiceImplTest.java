@@ -107,15 +107,18 @@ public class AuthorServiceImplTest {
 
     // -------------- Test 7 --------------
     @Test
-    void deleteAuthor_ShouldCallRepositoryDeleteById(){
+    void deleteAuthor_ShouldCallRepositoryDelete(){
         //Arrange
-        doNothing().when(authorRepository).deleteById(1L);
+        Author author = new Author(1L, "J.K. Rowling", "British", "rowling.jpg");
+        when(authorRepository.findById(1L)).thenReturn(Optional.of(author));
+        doNothing().when(authorRepository).delete(author);
 
         //Act
         authorServiceImpl.deleteAuthor(1L);
 
         //Assert
-        verify(authorRepository, times(1)).deleteById(1L);
+        verify(authorRepository, times(1)).findById(1L);
+        verify(authorRepository, times(1)).delete(author);
     }
 
 }
