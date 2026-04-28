@@ -67,10 +67,31 @@
   display: block;
 }
 
-.book-title {
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
+.book-description {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   font-weight: bolder;
+  font-size: xx-small;
+}
+
+.book-title {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.book-detail-image {
+  max-width: 100%;
+  height: 300px;
+}
+
+
+.top-book-listing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0 2rem;
+
 }
